@@ -11,4 +11,12 @@ adddBtn.addEventListener("click", ()=>{
        addTodoItem(text);
        input.value = "";
     }
-})
+});
+
+// function condation  craate TO-DO
+
+function addTodoItem(text) {
+    const li = document.createElement("li");
+    //class NAme
+    li.className = ""
+}
