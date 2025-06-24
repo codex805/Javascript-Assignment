@@ -43,3 +43,25 @@ function addTodoItem(text) {
     list.appendChild(li);
     
 }
+
+//Edit to Do
+function ediTodo(span, button){
+    const  oldText = span.textContent;
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = oldText;
+    input.className = "form-control form-control-sm me-2";
+     span.replaceWith(input);
+     button.textContent = "Save";
+    
+     button.onclick = () => {
+        const newText = input.value.trim();
+        if(newText != ""){
+            span.textContent = newText;
+            input.replaceWith(span);
+            button.textContent = "Edit";
+            button.onclick = () =>  ediTodo(span, button)
+        }
+     }
+}
