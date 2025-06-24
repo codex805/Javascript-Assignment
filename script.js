@@ -33,6 +33,13 @@ function addTodoItem(text) {
     deleteBtn.textContent = "Delete";
     deleteBtn.className = "btn btn-sm btn-danger";
     deleteBtn.addEventListener("click", () => li.remove());
+
+    const buttonGroup = document.createElement("div");
+    buttonGroup.appendChild(ediBtn);
+    buttonGroup.appendChild(deleteBtn);
     
+    li.appendChild(span);
+    li.appendChild(buttonGroup);
+    list.appendChild(li);
     
 }
