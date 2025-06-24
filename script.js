@@ -18,5 +18,9 @@ adddBtn.addEventListener("click", ()=>{
 function addTodoItem(text) {
     const li = document.createElement("li");
     //class NAme
-    li.className = ""
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    const span = document.createElement("span");
+    span.textContent = text;
+    
 }
