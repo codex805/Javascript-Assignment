@@ -22,5 +22,10 @@ function addTodoItem(text) {
 
     const span = document.createElement("span");
     span.textContent = text;
-    
+
+    //Create Button
+    const ediBtn = document.createElement("button");
+    ediBtn.textContent = "Edit";
+    ediBtn.className = "btn btn-sm btn-warning me-2";
+    ediBtn.addEventListener("click", () => ediTodo(span, ediBtn));
 }
