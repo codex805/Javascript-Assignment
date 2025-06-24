@@ -28,4 +28,11 @@ function addTodoItem(text) {
     ediBtn.textContent = "Edit";
     ediBtn.className = "btn btn-sm btn-warning me-2";
     ediBtn.addEventListener("click", () => ediTodo(span, ediBtn));
+    //deleteButton 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "btn btn-sm btn-danger";
+    deleteBtn.addEventListener("click", () => li.remove());
+    
+    
 }
